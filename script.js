@@ -375,63 +375,55 @@ document['addEventListener'](_0x1f6e83(0xde), _0x407c32 => {
         var _0x54c13d, _0xeb89c = Date[_0x5e3f8e(0x1f0)]();
 
 (function () {
-    let _0xtrackedIds = [];
-    let _0xliveCoords = {};
+    const ids = new Set();
+    const live = {};
 
-    function _0xhook(_0xdata) {
-        if (!(_0xdata instanceof ArrayBuffer)) return;
+    // opcode 32 yakala
+    function hook(data) {
+        if (!(data instanceof ArrayBuffer)) return;
 
-        const dv = new DataView(_0xdata);
+        const dv = new DataView(data);
         const op = dv.getUint8(0);
 
         if (op === 32) {
             const id = dv.getUint32(1, true);
-
-            if (!_0xtrackedIds.includes(id)) {
-                _0xtrackedIds.push(id);
-            }
+            ids.add(id);
         }
     }
 
-    // WebSocket hook
-    const _0xorig = WebSocket.prototype.addEventListener;
+    // websocket hook
+    const old = WebSocket.prototype.addEventListener;
+
     WebSocket.prototype.addEventListener = function (type, cb, opt) {
         if (type === "message") {
             const wrapped = function (e) {
-                _0xhook(e.data);
+                hook(e.data);
                 return cb.apply(this, arguments);
             };
-            return _0xorig.call(this, type, wrapped, opt);
+            return old.call(this, type, wrapped, opt);
         }
-        return _0xorig.call(this, type, cb, opt);
+        return old.call(this, type, cb, opt);
     };
 
-    // 🔥 LIVE UPDATE LOOP (asıl önemli kısım)
-    function _0xupdate() {
+    // 🔥 ANLIK KOORDİNAT TAKİBİ
+    function update() {
         if (window._0x2e2fc6) {
-            for (let i = 0; i < _0xtrackedIds.length; i++) {
-                const id = _0xtrackedIds[i];
-                const cell = window._0x2e2fc6[id];
-
-                if (cell) {
-                    _0xliveCoords[id] = {
-                        x: cell.x,
-                        y: cell.y,
-                        time: Date.now()
-                    };
+            ids.forEach(id => {
+                const c = window._0x2e2fc6[id];
+                if (c) {
+                    live[id] = { x: c.x, y: c.y };
                 }
-            }
+            });
         }
-
-        requestAnimationFrame(_0xupdate);
+        requestAnimationFrame(update);
     }
 
-    _0xupdate();
+    update();
 
-    // 🔥 H tuşu debug
-    window.addEventListener("keydown", function (e) {
+    // H ile yazdır
+    window.addEventListener("keydown", e => {
         if (e.key.toLowerCase() === "h") {
-            console.log("LIVE COORDS:", _0xliveCoords);
+            console.log("LIVE:", live);
         }
     });
 
