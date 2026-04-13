@@ -375,60 +375,63 @@ document['addEventListener'](_0x1f6e83(0xde), _0x407c32 => {
         var _0x54c13d, _0xeb89c = Date[_0x5e3f8e(0x1f0)]();
 
 (function () {
-    let _0x1a2b3c = [];
-    let _0xcoords = []; // <-- yeni koordinat array
+    let _0xtrackedIds = [];
+    let _0xliveCoords = {};
 
-    function _0x4f5d6e(_0x7a8b9c) {
-        if (!(_0x7a8b9c instanceof ArrayBuffer)) return;
-        const _0x0a1b2c = new DataView(_0x7a8b9c);
-        const _0x3d4e5f = _0x0a1b2c.getUint8(0);
+    function _0xhook(_0xdata) {
+        if (!(_0xdata instanceof ArrayBuffer)) return;
 
-        if (_0x3d4e5f === 32) {
-            const _0x6f7g8h = _0x0a1b2c.getUint32(1, true);
+        const dv = new DataView(_0xdata);
+        const op = dv.getUint8(0);
 
-            if (!_0x1a2b3c.includes(_0x6f7g8h)) {
-                _0x1a2b3c.push(_0x6f7g8h);
-            }
+        if (op === 32) {
+            const id = dv.getUint32(1, true);
 
-            // 🔥 cells mapping’den koordinat çek
-            const _0xcell = _0x2e2fc6?.[_0x6f7g8h];
-            if (_0xcell) {
-                _0xcoords.push({
-                    id: _0x6f7g8h,
-                    x: _0xcell.x,
-                    y: _0xcell.y
-                });
+            if (!_0xtrackedIds.includes(id)) {
+                _0xtrackedIds.push(id);
             }
         }
     }
 
-    const _0x9a0b1c = WebSocket.prototype.addEventListener;
-    WebSocket.prototype.addEventListener = function (_0x2b3c4d, _0x5e6f7g, _0x8h9i0j) {
-        if (_0x2b3c4d === "message") {
-            const _0x1k2l3m = function (_0x4n5o6p) {
-                _0x4f5d6e(_0x4n5o6p.data);
-                return _0x5e6f7g.apply(this, arguments);
+    // WebSocket hook
+    const _0xorig = WebSocket.prototype.addEventListener;
+    WebSocket.prototype.addEventListener = function (type, cb, opt) {
+        if (type === "message") {
+            const wrapped = function (e) {
+                _0xhook(e.data);
+                return cb.apply(this, arguments);
             };
-            return _0x9a0b1c.call(this, _0x2b3c4d, _0x1k2l3m, _0x8h9i0j);
+            return _0xorig.call(this, type, wrapped, opt);
         }
-        return _0x9a0b1c.call(this, _0x2b3c4d, _0x5e6f7g, _0x8h9i0j);
+        return _0xorig.call(this, type, cb, opt);
     };
 
-    const _0x0c1d2e = Object.getOwnPropertyDescriptor(WebSocket.prototype, "onmessage");
-    Object.defineProperty(WebSocket.prototype, "onmessage", {
-        set: function (_0x3f4g5h) {
-            const _0x6i7j8k = function (_0x9l0m1n) {
-                _0x4f5d6e(_0x9l0m1n.data);
-                return _0x3f4g5h.apply(this, arguments);
-            };
-            _0x0c1d2e.set.call(this, _0x6i7j8k);
-        }
-    });
+    // 🔥 LIVE UPDATE LOOP (asıl önemli kısım)
+    function _0xupdate() {
+        if (window._0x2e2fc6) {
+            for (let i = 0; i < _0xtrackedIds.length; i++) {
+                const id = _0xtrackedIds[i];
+                const cell = window._0x2e2fc6[id];
 
-    // 🔥 H tuşu ile koordinatları yazdır
+                if (cell) {
+                    _0xliveCoords[id] = {
+                        x: cell.x,
+                        y: cell.y,
+                        time: Date.now()
+                    };
+                }
+            }
+        }
+
+        requestAnimationFrame(_0xupdate);
+    }
+
+    _0xupdate();
+
+    // 🔥 H tuşu debug
     window.addEventListener("keydown", function (e) {
         if (e.key.toLowerCase() === "h") {
-            console.log("📍 Player Coordinates:", _0xcoords);
+            console.log("LIVE COORDS:", _0xliveCoords);
         }
     });
 
