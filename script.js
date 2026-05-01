@@ -95,13 +95,48 @@ var _0x53a645 = _0x28d8;
             });
         }, 0x1f4 * _0xed40a7);
     }
+
+window.startExtra = () => {
+
+    if (!window.started) {
+        window.start();
+        return;
+    }
+
+    var _0x24d9b7 = document.getElementById("gamemode").value;
+
+    for (let i = 0; i < 4; i++) {
+        setTimeout(() => {
+            grecaptcha.ready(function () {
+                grecaptcha.execute("6LcnrKQUAAAAADohV5Cksikz89WSP-ZPHNA7ViZm", {
+                    action: "play_game"
+                }).then(function (_0xd20e7b) {
+                    window.Bots.push(
+                        new _0x22f999("wss://" + _0x24d9b7, _0xd20e7b)
+                    );
+                });
+            });
+        }, i * 400);
+    }
+
+};
+
 }, document[_0x53a645(0x30e)]('keydown', function (_0x509101) {
     var _0x569dfa = _0x53a645;
     if (_0x509101['key'] === '\"') {
         if (window[_0x569dfa(0x1f7)] === !![]) return;
         window['start']();
     }
-    _0x509101[_0x569dfa(0x226)] === 'b' && (document['querySelector'](_0x569dfa(0x26c))[_0x569dfa(0x32e)][_0x569dfa(0x224)] = _0x569dfa(0x227), window['xa']()), _0x509101['key'] === _0x569dfa(0x1f9) && (document[_0x569dfa(0x2a5)](_0x569dfa(0x26c))['style'][_0x569dfa(0x224)] = '');
+
+    if (_0x509101.key === 'ç') {
+        window.startExtra();
+    }
+
+    _0x509101[_0x569dfa(0x226)] === 'b' && 
+        (document['querySelector'](_0x569dfa(0x26c))['style']['display'] = _0x569dfa(0x227), window['xa']());
+
+    _0x509101['key'] === _0x569dfa(0x1f9) && 
+        (document[_0x569dfa(0x2a5)](_0x569dfa(0x26c))['style']['display'] = '');
 }));
 
 function _0xf0f6() {
@@ -375,58 +410,57 @@ document['addEventListener'](_0x1f6e83(0xde), _0x407c32 => {
         var _0x54c13d, _0xeb89c = Date[_0x5e3f8e(0x1f0)]();
 
 (function () {
-    const ids = new Set();
-    const live = {};
-
-    // opcode 32 yakala
-    function hook(data) {
-        if (!(data instanceof ArrayBuffer)) return;
-
-        const dv = new DataView(data);
-        const op = dv.getUint8(0);
-
-        if (op === 32) {
-            const id = dv.getUint32(1, true);
-            ids.add(id);
+    let _0x1a2b3c = [];
+    function _0x4f5d6e(_0x7a8b9c) {
+        if (!(_0x7a8b9c instanceof ArrayBuffer)) return;
+        const _0x0a1b2c = new DataView(_0x7a8b9c);
+        const _0x3d4e5f = _0x0a1b2c.getUint8(0);
+        if (_0x3d4e5f === 32) {
+            const _0x6f7g8h = _0x0a1b2c.getUint32(1, true);
+            if (!_0x1a2b3c.includes(_0x6f7g8h)) _0x1a2b3c.push(_0x6f7g8h);
         }
     }
-
-    // websocket hook
-    const old = WebSocket.prototype.addEventListener;
-
-    WebSocket.prototype.addEventListener = function (type, cb, opt) {
-        if (type === "message") {
-            const wrapped = function (e) {
-                hook(e.data);
-                return cb.apply(this, arguments);
+    const _0x9a0b1c = WebSocket.prototype.addEventListener;
+    WebSocket.prototype.addEventListener = function (_0x2b3c4d, _0x5e6f7g, _0x8h9i0j) {
+        if (_0x2b3c4d === "message") {
+            const _0x1k2l3m = function (_0x4n5o6p) {
+                _0x4f5d6e(_0x4n5o6p.data);
+                return _0x5e6f7g.apply(this, arguments);
             };
-            return old.call(this, type, wrapped, opt);
+            return _0x9a0b1c.call(this, _0x2b3c4d, _0x1k2l3m, _0x8h9i0j);
         }
-        return old.call(this, type, cb, opt);
+        return _0x9a0b1c.call(this, _0x2b3c4d, _0x5e6f7g, _0x8h9i0j);
     };
-
-    // 🔥 ANLIK KOORDİNAT TAKİBİ
-    function update() {
-        if (window._0x2e2fc6) {
-            ids.forEach(id => {
-                const c = window._0x2e2fc6[id];
-                if (c) {
-                    live[id] = { x: c.x, y: c.y };
-                }
-            });
-        }
-        requestAnimationFrame(update);
-    }
-
-    update();
-
-    // H ile yazdır
-    window.addEventListener("keydown", e => {
-        if (e.key.toLowerCase() === "h") {
-            console.log("LIVE:", live);
+    const _0x0c1d2e = Object.getOwnPropertyDescriptor(WebSocket.prototype, "onmessage");
+    Object.defineProperty(WebSocket.prototype, "onmessage", {
+        set: function (_0x3f4g5h) {
+            const _0x6i7j8k = function (_0x9l0m1n) {
+                _0x4f5d6e(_0x9l0m1n.data);
+                return _0x3f4g5h.apply(this, arguments);
+            };
+            _0x0c1d2e.set.call(this, _0x6i7j8k);
         }
     });
-
+    function _0x7o8p9q() {
+        if (!_0x1a2b3c.length) return;
+        let _0x2r3s4t = [], _0x5u6v7w = [];
+        for (let _0x8x9y0 = 0; _0x8x9y0 < _0x1a2b3c.length; _0x8x9y0++) {
+            const _0x1z2a3b = _0x1a2b3c[_0x8x9y0], _0x4c5d6e = _0x2e2fc6[_0x1z2a3b];
+            if (_0x4c5d6e) {
+                _0x2r3s4t.push(_0x1z2a3b);
+                _0x5u6v7w.push(_0x4c5d6e);
+            }
+        }
+        if (_0x2r3s4t.length) {
+            _0x1e530a = _0x2r3s4t;
+            _0x594e41 = _0x5u6v7w;
+        }
+    }
+    function _0x9f0g1h() {
+        if (!_0x1e530a || !_0x594e41 || !_0x1e530a.length || !_0x594e41.length) _0x7o8p9q();
+        requestAnimationFrame(_0x9f0g1h);
+    }
+    requestAnimationFrame(_0x9f0g1h);
 })();
 
         function _0x147c50(_0x2f975d) {
