@@ -727,6 +727,7 @@ function getScript(_0x396b66, _0x985f75) {
         pingInterval && (clearInterval(pingInterval), pingInterval = null);
         playGameClickEvent = 0x0, console[_0x5621ae(0x549, 'SSUm')](_0x5621ae(0x288, '7l)D'), _0x8f9a71 ? _0x8f9a71[_0x5621ae(0x652, '^7*h')] : ''), _0x3f52c4 = null, _0x268d34(), _0x49b7e1[_0x5621ae(0x43b, '1Ax*')] = ![];
         try {
+            if (typeof turnstile !== _0x5621ae(0x633, 'n69I')) turnstile[_0x5621ae(0x32a, 'VEum')]();
         } catch (_0x45a733) {}
     }
 
