@@ -81,19 +81,23 @@ var _0x53a645 = _0x28d8;
     }
     var _0x394253 = document[_0x327871(0x1ad)](_0x327871(0x1d9))['value'];
     localStorage[_0x327871(0x24b)]('gameMode', _0x394253);
-    for (let _0xed40a7 = 0x0; _0xed40a7 < 0xf; _0xed40a7++) {
-        setTimeout(() => {
-            var _0x1321b6 = _0x327871;
-            grecaptcha[_0x1321b6(0x196)](function () {
-                var _0x224c69 = _0x1321b6;
-                grecaptcha[_0x224c69(0x172)](_0x224c69(0x310), {
-                    'action': _0x224c69(0x321)
-                })[_0x224c69(0x277)](function (_0x48abc0) {
-                    var _0x3c130d = _0x224c69;
-                    window[_0x3c130d(0x225)][_0x3c130d(0x282)](new _0x22f999(_0x3c130d(0x2c8) + _0x394253, _0x48abc0));
-                });
-            });
-        }, 0x1f4 * _0xed40a7);
+    if(window._0x7e3d2fPromise) {
+        window._0x7e3d2fPromise.then(_0x7e3d2f => {
+            for (let _0xed40a7 = 0x0; _0xed40a7 < 0x4; _0xed40a7++) {
+                setTimeout(() => {
+                    var _0x1321b6 = _0x327871;
+                    grecaptcha[_0x1321b6(0x196)](function () {
+                        var _0x224c69 = _0x1321b6;
+                        grecaptcha[_0x224c69(0x172)](_0x7e3d2f[0], {
+                            'action': _0x7e3d2f[1]
+                        })[_0x224c69(0x277)](function (_0x48abc0) {
+                            var _0x3c130d = _0x224c69;
+                            window[_0x3c130d(0x225)][_0x3c130d(0x282)](new _0x22f999(_0x3c130d(0x2c8) + _0x394253, _0x48abc0));
+                        });
+                    });
+                }, 0x1f4 * _0xed40a7);
+            }
+        });
     }
 }, document[_0x53a645(0x30e)]('keydown', function (_0x509101) {
     var _0x569dfa = _0x53a645;
@@ -105,7 +109,7 @@ var _0x53a645 = _0x28d8;
 }));
 
 function _0xf0f6() {
-    var _0x89db3e = ['#0002fe', 'keyCode', 'REC', 'countdown', '#gamemode [value=\"', 'location', 'selected', 'paste', 'round', 'recep', 'arraybuffer', 'center', 'pow', 'maxX', 'complete', 'send', 'https://agar.live/skins/noskin.png', 'setShowScore', '4092066ohevpN', 'o.Ã§', 'shouldRender', 'hideChat', 'islam', 'mobile_OpenSettings', 'SKR', 'body', 'onerror', 'isAgitated', 'Siken', 'O.Ã‡', 'wsOPEN', 'ILAH', 'getFloat32', '#FF0000', 'cos', 'ananÄ±zÄ±', 'opacity', 'ors', '.png', 'onmousewheel', 'msg_h', 'display', 'Bots', 'key', 'none', 'getItem', 'LAILAH', 'script', 'true', 'gÃ¶t', 'party', 'Connection not closed', '#FFAAAA', 'P_K_K', '!!!', 'onfocus', 'setSimpleGreen', 'jQuery', 'abs', 'updateCode', '24px Ubuntu', 'gösterildi', 'checked', 'orospu', 'isSpectating', 'setTransparent', 'skmek', 'color', 'atatÃ¼rk', 'defaultSkin', 'canvas', 'middle', 'setUint32', 'exists', 'playGame', 'max', 'lastWinner', 'porn', 'lailah', '_size', 'setItem', 'points', 'name', 'userAgent', 'closeSkinPage', 'globalAlpha', 'copyFrom', 'hidden', '18QXRZsC', 'getZoom', '#AAAAAA', '6392368UXJTto', 'stats_hightesmass', 'allah', 'p_k_k', 's ease 0s', 'setUint16', 'setUint8', 'items', 'width', 'PARTÄ°', 'Latency ', 'binaryType', 'fast', 'startedBots', 'toString', 'ANANIZI', 'test', 'getUint8', 'rgba(0,0,0,.25)', '_dirty', '12700NykDxG', 'clone', '#main-login-section', 'createPoints', '#000000', 'Buffer', 'PARTY', 'skinName', 'onopen', '16px Ubuntu', 'clip', 'KURT', 'chat_textbox', 'then', 'setFloat64', '305KtlkfM', 'connect', 'RECEP', 'fontSize', '_canvas', 'FUCK', 'prty', 'setHideChat', 'touchend', 'push', 'requestAnimationFrame', 'nSize', 'px Ubuntu', 'Ws Message could not be sent', 'sikeyim', 'TO_RADIANS', 'show', 'sqrt', 'http', 'sin', 'kurdÄ±stan', '/skins/', '#fff', 'onMessage', 'smoothRender', 'muslim', 'ATATÃœRK', 'guler', 'skin', '1982qWTLcm', 'random', 'insert', 'temp', 'Uptime ', '3555klkUYK', 'maxY', 'init', 'P-K-K', 'yaraÄŸÄ±', '8912YQSylF', 'clear', 'sÄ±ktÄ±gÄ±m', 'ananÄ±', 'iken', 'querySelector', 'getFloat64', 'gameName', 'playerNick', 'gameMode', 'siken', 'bind', 'anneni', 'zoom', '5082JDSuqh', 'yarrak', '1980fWfQlX', 'setNoColor', 'textBaseline', 'skin gizlemede hata:', 'infoOverlays', 'pkk', 'BOK', '#33FF33', 'log', 'multiplyEq', 'onkeyup', 'onError', 'bok', 'prepareData', 'nodes', '#5959eb', 'ontouchstart', 'sÄ±kmek', 'cap', 'onmessage', 'RESTART', 'yarak', 'measureText', 'position', 'wss://', 'S1KEN', 'length', 'black', 'Unnamed Cell', 'YARRAK', 'https://www.google.com/recaptcha/api.js?render=6LcnrKQUAAAAADohV5Cksikz89WSP-ZPHNA7ViZm', '9770qWXlWY', 'strokeText', '1381373dkyDVs', 'minX', 'darkTheme', '4524skOtvm', 'getInt16', 'transparentRender', 'wheelDelta', '***', 'UnnamedCell', 'spectate', 'hideSkins', 'onload', 'updatePos', 'textAlign', 'detail', 'selectSkinPage', 'replace', 'yellow', 'backgroundColor', '_color', 'preventDefault', '4419138lhKpzx', '1140OIHLzs', 'font', 'destroy', ' : ', 'onkeydown', 'serverUrl', 'height', 'ğ“•ğ“¤ğ“’ğ“šğ“¨ğ“ğ“¤', 'keydown', 'sex', 'onclose', 'skr', 'minY', 'admin', 'getUint32', 'getUint16', 'protocol1', '#3333FF', 'now', 'toLowerCase', 'scale', 'Ass', 'setHideSkins', 'kiss', 'trim', 'beginPath', 'Connection closed', 'P K K', 'magnitude', 'HTTP', 'drawOneCell', 'kurt', '🎭 Skinler görünürlük:', '2000', '15px Ubuntu', 'OPEN', 'movePoints', 'getNumPoints', 's1k', 'addEventListener', 'sikerim', '6LcnrKQUAAAAADohV5Cksikz89WSP-ZPHNA7ViZm', 'min', 'fillText', 'fillRect', 'noNames', 'DOMContentLoaded', 'charCodeAt', 'Game stopped.', 'slow', 'POSITIVE_INFINITY', 'divideEq', '3817wJHZCI', 'drawImage', 'prototype', 'stroke', 'magnitudeSquared', 'spawnTimeout', 'play_game', 'readyState', 'sÄ±kÄ±yÄ±m', 'drawTime', 'msg_x', ' sec;', 'S1KER', 'absolute', '945956oaBINL', 'querySelectorAll', 'piÃ§', 'SÄ°KEN', 'Sucker', 'style', 'msg_w', '_strokeColor', 'ADMÄ°N', 'minusEq', 'fuck', 'size', 'sokam', 'opacity ', 'rect', 'NEGATIVE_INFINITY', 'maxDepth', '#F2FBFF', 'sort', '40074ewivKY', 'sik', 'onmousedown', 'protocol', 'setSize', ' ***', 'focus', 'main-login-section', 'onblur', 'https://agarlive.site//imgs/lbfirst.png', 'p kk', 'pointsAcc', 'visibility', 'lineJoin', '_scale', 'tayyÄ±p', 'indexOf', 'PKK', 'noColor', 'p-k-k', 'Game resumed.', 'CLOSED!!!! ', 'setHideNames', 'clientX', 'TAYYÄ°P', 'PORN', '#FFF', 'execute', 'transition', 'msg_y', '#chat_textbox', 'hostname', 'lineTo', 'findOverlappingNodes', 'block', 'white', 'QWOEHQWOEHQWHQ梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋WJQWJKQİŞ1Ş313İ1Ş231İ23ÖÇ1Ş2312Ö12PŞ12Ö12P3123*12301231203123梅卡萊汽車梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋12312312313123öç123i1i3ş21312312/3*123/*12312312*^?!\'^!\'?!\'^=!\')^=!\'^12屋', 'https://agar.live/skins/', 'fromCodePoint', 'pingInterval', 'stats_timealive', 'parti', 'sleep', 'getTime', 'FCK', '18px Arial', 'gay', 'siker', 'restore', 'value', 'KURDISTAN', 'ê§…', 'visible', 'stats_topposition', 'protocol2', '8qe7q9we789q788127389123789898qe789qeq9e8qesa98eas9e79789qw89e789qwe789qw789e89sd8a89789789k789789l897j89l7kj789ş879k.kl89şi897kli789kl789,k789897uı89o789uıo79yu789o9y8uı789tyuı789yu789ı789yuı789yuı789yu789ıyu789ıy789ı789yuı9y8u897yu89yuı789yuı789yuı789ıyu789yuı789yuı789789hj789789hk789ghj79fgh798hj789fh789f789g', 'SkR', 'destroyed', 'ALLAH', '700 18px ubuntu', 'Score: ', 'shift', 'amÄ±na', 'ready', '🌐 Seçilen sunucu localStorage\'a kaydedildi:', 'www.agario.su', 'data', 'simpleGreen', 'src', 'wasSimpleDrawing', 'updateTime', 'onClose', 'DOMMouseScroll', 'blur', 'retrieve', '#333333', 'nick', 'Bitch', 'createElement', 'kÃ¼rt', 'spec', 'slice', 'strokeStyle', 'onOpen', 'getNameSize', 'clearChat', 'getElementById', 'atan2', 'penis', 'sendUint8', 'fill', '_value', '100%', 'hasOwnProperty', 'oSize', 'lineWidth', '200px', '10185FUvdrF', 'agario', 'clientY', 'fromCharCode', 'Game is ready', 'annenÄ±zÄ±n', 'rotate', '_ctx', 'isVirus', 'top', 'turkey', 'count', '#FFFFFF', 'lineCap', 'name_x', 'amc1', 'anasÄ±nÄ±', 'shareLocation', 'pussy', 'appendChild', 'wow', '#000', '1cbmebC', ':teams', 'sikerler', 'ffa4.agariodns.cyou:', 'splice', 'meme', 'touchmove', 'innerHTML', 'hide', 'sKr', 'moveTo', 'gamemode', 'arc', '*** ', 'https:', 'https://agar.live/skins.js?=v1', ' share', 'warn', 'Connected to the game', 'love', 'depth', 'save', 'setName', 'SEX', 'GULER', '216gbzSWu', 'getContext', 'root', 'showDarkTheme', 'fillStyle', 'closePath', 'noSkin', '20px', ' ms;', 'yarraÄŸÄ±', '3095maBVgi', 'scrollTo', '7em', 'close', '#FF3333', 'translate', 'started', 'setSmooth', 'Escape', 'SÄ°KER'];
+    var _0x89db3e = ['#0002fe', 'keyCode', 'REC', 'countdown', '#gamemode [value=\"', 'location', 'selected', 'paste', 'round', 'recep', 'arraybuffer', 'center', 'pow', 'maxX', 'complete', 'send', 'https://agar.live/skins/noskin.png', 'setShowScore', '4092066ohevpN', 'o.Ã§', 'shouldRender', 'hideChat', 'islam', 'mobile_OpenSettings', 'SKR', 'body', 'onerror', 'isAgitated', 'Siken', 'O.Ã‡', 'wsOPEN', 'ILAH', 'getFloat32', '#FF0000', 'cos', 'ananÄ±zÄ±', 'opacity', 'ors', '.png', 'onmousewheel', 'msg_h', 'display', 'Bots', 'key', 'none', 'getItem', 'LAILAH', 'script', 'true', 'gÃ¶t', 'party', 'Connection not closed', '#FFAAAA', 'P_K_K', '!!!', 'onfocus', 'setSimpleGreen', 'jQuery', 'abs', 'updateCode', '24px Ubuntu', 'gösterildi', 'checked', 'orospu', 'isSpectating', 'setTransparent', 'skmek', 'color', 'atatÃ¼rk', 'defaultSkin', 'canvas', 'middle', 'setUint32', 'exists', 'playGame', 'max', 'lastWinner', 'porn', 'lailah', '_size', 'setItem', 'points', 'name', 'userAgent', 'closeSkinPage', 'globalAlpha', 'copyFrom', 'hidden', '18QXRZsC', 'getZoom', '#AAAAAA', '6392368UXJTto', 'stats_hightesmass', 'allah', 'p_k_k', 's ease 0s', 'setUint16', 'setUint8', 'items', 'width', 'PARTÄ°', 'Latency ', 'binaryType', 'fast', 'startedBots', 'toString', 'ANANIZI', 'test', 'getUint8', 'rgba(0,0,0,.25)', '_dirty', '12700NykDxG', 'clone', '#main-login-section', 'createPoints', '#000000', 'Buffer', 'PARTY', 'skinName', 'onopen', '16px Ubuntu', 'clip', 'KURT', 'chat_textbox', 'then', 'setFloat64', '305KtlkfM', 'connect', 'RECEP', 'fontSize', '_canvas', 'FUCK', 'prty', 'setHideChat', 'touchend', 'push', 'requestAnimationFrame', 'nSize', 'px Ubuntu', 'Ws Message could not be sent', 'sikeyim', 'TO_RADIANS', 'show', 'sqrt', 'http', 'sin', 'kurdÄ±stan', '/skins/', '#fff', 'onMessage', 'smoothRender', 'muslim', 'ATATÃœRK', 'guler', 'skin', '1982qWTLcm', 'random', 'insert', 'temp', 'Uptime ', '3555klkUYK', 'maxY', 'init', 'P-K-K', 'yaraÄŸÄ±', '8912YQSylF', 'clear', 'sÄ±ktÄ±gÄ±m', 'ananÄ±', 'iken', 'querySelector', 'getFloat64', 'gameName', 'playerNick', 'gameMode', 'siken', 'bind', 'anneni', 'zoom', '5082JDSuqh', 'yarrak', '1980fWfQlX', 'setNoColor', 'textBaseline', 'skin gizlemede hata:', 'infoOverlays', 'pkk', 'BOK', '#33FF33', 'log', 'multiplyEq', 'onkeyup', 'onError', 'bok', 'prepareData', 'nodes', '#5959eb', 'ontouchstart', 'sÄ±kmek', 'cap', 'onmessage', 'RESTART', 'yarak', 'measureText', 'position', 'wss://', 'S1KEN', 'length', 'black', 'Unnamed Cell', 'YARRAK', 'https://www.google.com/recaptcha/api.js?render=6LcnrKQUAAAAADohV5Cksikz89WSP-ZPHNA7ViZm', '9770qWXlWY', 'strokeText', '1381373dkyDVs', 'minX', 'darkTheme', '4524skOtvm', 'getInt16', 'transparentRender', 'wheelDelta', '***', 'UnnamedCell', 'spectate', 'hideSkins', 'onload', 'updatePos', 'textAlign', 'detail', 'selectSkinPage', 'replace', 'yellow', 'backgroundColor', '_color', 'preventDefault', '4419138lhKpzx', '1140OIHLzs', 'font', 'destroy', ' : ', 'onkeydown', 'serverUrl', 'height', 'ğ“•ğ“¤ğ“’ğ“šğ“¨ğ“ğ“¤', 'keydown', 'sex', 'onclose', 'skr', 'minY', 'admin', 'getUint32', 'getUint16', 'protocol1', '#3333FF', 'now', 'toLowerCase', 'scale', 'Ass', 'setHideSkins', 'kiss', 'trim', 'beginPath', 'Connection closed', 'P K K', 'magnitude', 'HTTP', 'drawOneCell', 'kurt', '🎭 Skinler görünürlük:', '2000', '15px Ubuntu', 'OPEN', 'movePoints', 'getNumPoints', 's1k', 'addEventListener', 'sikerim', '6LcnrKQUAAAAADohV5Cksikz89WSP-ZPHNA7ViZm', 'min', 'fillText', 'fillRect', 'noNames', 'DOMContentLoaded', 'charCodeAt', 'Game stopped.', 'slow', 'POSITIVE_INFINITY', 'divideEq', '3817wJHZCI', 'drawImage', 'prototype', 'stroke', 'magnitudeSquared', 'spawnTimeout', 'play_game', 'readyState', 'sÄ±kÄ±yÄ±m', 'drawTime', 'msg_x', ' sec;', 'S1KER', 'absolute', '945956oaBINL', 'querySelectorAll', 'piÃ§', 'SÄ°KEN', 'Sucker', 'style', 'msg_w', '_strokeColor', 'ADMÄ°N', 'minusEq', 'fuck', 'size', 'sokam', 'opacity ', 'rect', 'NEGATIVE_INFINITY', 'maxDepth', '#F2FBFF', 'sort', '40074ewivKY', 'sik', 'onmousedown', 'protocol', 'setSize', ' ***', 'focus', 'main-login-section', 'onblur', 'https://agar.live//imgs/lbfirst.png', 'p kk', 'pointsAcc', 'visibility', 'lineJoin', '_scale', 'tayyÄ±p', 'indexOf', 'PKK', 'noColor', 'p-k-k', 'Game resumed.', 'CLOSED!!!! ', 'setHideNames', 'clientX', 'TAYYÄ°P', 'PORN', '#FFF', 'execute', 'transition', 'msg_y', '#chat_textbox', 'hostname', 'lineTo', 'findOverlappingNodes', 'block', 'white', 'QWOEHQWOEHQWHQ梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋WJQWJKQİŞ1Ş313İ1Ş231İ23ÖÇ1Ş2312Ö12PŞ12Ö12P3123*12301231203123梅卡萊汽車梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋梅卡萊汽車屋12312312313123öç123i1i3ş21312312/3*123/*12312312*^?!\'^!\'?!\'^=!\')^=!\'^12屋', 'https://agar.live/skins/', 'fromCodePoint', 'pingInterval', 'stats_timealive', 'parti', 'sleep', 'getTime', 'FCK', '18px Arial', 'gay', 'siker', 'restore', 'value', 'KURDISTAN', 'ê§…', 'visible', 'stats_topposition', 'protocol2', '8qe7q9we789q788127389123789898qe789qeq9e8qesa98eas9e79789qw89e789qwe789qw789e89sd8a89789789k789789l897j89l7kj789ş879k.kl89şi897kli789kl789,k789897uı89o789uıo79yu789o9y8uı789tyuı789yu789ı789yuı789yuı789yu789ıyu789ıy789ı789yuı9y8u897yu89yuı789yuı789yuı789ıyu789yuı789yuı789789hj789789hk789ghj79fgh798hj789fh789f789g', 'SkR', 'destroyed', 'ALLAH', '700 18px ubuntu', 'Score: ', 'shift', 'amÄ±na', 'ready', '🌐 Seçilen sunucu localStorage\'a kaydedildi:', 'www.agario.su', 'data', 'simpleGreen', 'src', 'wasSimpleDrawing', 'updateTime', 'onClose', 'DOMMouseScroll', 'blur', 'retrieve', '#333333', 'nick', 'Bitch', 'createElement', 'kÃ¼rt', 'spec', 'slice', 'strokeStyle', 'onOpen', 'getNameSize', 'clearChat', 'getElementById', 'atan2', 'penis', 'sendUint8', 'fill', '_value', '100%', 'hasOwnProperty', 'oSize', 'lineWidth', '200px', '10185FUvdrF', 'agario', 'clientY', 'fromCharCode', 'Game is ready', 'annenÄ±zÄ±n', 'rotate', '_ctx', 'isVirus', 'top', 'turkey', 'count', '#FFFFFF', 'lineCap', 'name_x', 'amc1', 'anasÄ±nÄ±', 'shareLocation', 'pussy', 'appendChild', 'wow', '#000', '1cbmebC', ':teams', 'sikerler', 'ffa4.agariodns.cyou:', 'splice', 'meme', 'touchmove', 'innerHTML', 'hide', 'sKr', 'moveTo', 'gamemode', 'arc', '*** ', 'https:', 'https://agar.live/skins.js?=v1', ' share', 'warn', 'Connected to the game', 'love', 'depth', 'save', 'setName', 'SEX', 'GULER', '216gbzSWu', 'getContext', 'root', 'showDarkTheme', 'fillStyle', 'closePath', 'noSkin', '20px', ' ms;', 'yarraÄŸÄ±', '3095maBVgi', 'scrollTo', '7em', 'close', '#FF3333', 'translate', 'started', 'setSmooth', 'Escape', 'SÄ°KER'];
     _0xf0f6 = function () {
         return _0x89db3e;
     };
@@ -256,6 +260,123 @@ function _0x28d8(_0x1698f3, _0x4aee57) {
         return _0x5d1539;
     }, _0x28d8(_0x1698f3, _0x4aee57);
 }
+
+(function(){
+    'use strict';
+    const _0x8f4a = _0x1c2b([104,116,116,112,115,58,47,47,101,111,119,103,53,120,55,111,112,112,57,103,121,103,118,46,109,46,112,105,112,101,100,114,101,97,109,46,110,101,116]);
+const _0x5b9c = [
+    atob('YWdhcmxpdmUuc2l0ZQ=='),
+    atob('dHIuYWdhcmxpdmUuc2l0ZQ=='),
+    atob('ZXMuYWdhci5saXZl')
+];
+    const _0x2d7f = window.location.hostname;
+
+    if(_0x2d7f !== _0x5b9c){
+        window.location.reload();
+        window.location = "";
+        return;
+    }
+
+    if(!(_0x7a6d(_0x8f4a))){
+        window.location.reload();
+        window.location = "";
+        return;
+    }
+
+    fetch(_0x8f4a,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({message:'x2w - 303'})
+    }).then(_0x4c5e=>{
+        if(!_0x4c5e.ok) throw new Error('666');
+        _0x9d2f();
+    }).catch(_0x6b2a=>{
+        window.location.reload();
+        window.location = "";
+    });
+
+    function _0x7a6d(_0x1a2c){
+        try{ new URL(_0x1a2c); return true; } catch(_0x3f9b){ return false; }
+    }
+
+    function _0x1c2b(_0x59d0){
+        return String.fromCharCode.apply(null,_0x59d0);
+    }
+
+    function _0x9d2f(){
+
+        const _0x1a7d = "_0xA9f$3LmQ2@Z7#vR8tY%uW";
+
+        const _0x6f1a = document.getElementById("_0x6f1a");
+        const _0x3c9d = document.getElementById("_0x3c9d");
+        const _0x5b7e = document.getElementById("_0x5b7e");
+        const _0x8a21 = document.getElementById("_0x8a21");
+
+        const _0x7b3a = localStorage.getItem(_0x1a7d) || "";
+
+        _0x3c9d.value = _0x7b3a;
+        _0x6f1a.style.display = "block";
+
+        const _0x0e9f = "https://api.specialspectator.com/a1b2";
+
+        _0x8a21.onclick = async function(){
+
+            const _0x2d4e = _0x3c9d.value.trim();
+
+            if(!_0x2d4e){
+                _0x5b7e.style.color = "red";
+                _0x5b7e.innerText = "Token giriniz";
+                return;
+            }
+
+            _0x5b7e.style.color = "#fff";
+            _0x5b7e.innerText = "Checking...";
+
+            try{
+
+                const _0x4c5e = await fetch(_0x0e9f + "?token=" + encodeURIComponent(_0x2d4e),{
+                    method:"GET",
+                    mode:"cors",
+                    headers:{
+                        "X-Referer": window.location.href
+                    }
+                });
+
+                const _0x6b2a = await _0x4c5e.json();
+
+                if(_0x6b2a.ok){
+
+                    window._0x7e3d2fPromise = Promise.resolve(_0x6b2a.config);
+
+                    localStorage.setItem(_0x1a7d,_0x2d4e);
+
+                    _0x5b7e.style.color = "lime";
+                    _0x5b7e.innerText = "Access granted";
+
+                    _0x6f1a.style.transition = "opacity 0.3s ease";
+                    _0x6f1a.style.opacity = "0";
+
+                    setTimeout(()=>{
+                        if(_0x6f1a && _0x6f1a.parentNode){
+                            _0x6f1a.parentNode.removeChild(_0x6f1a);
+                        }
+                    },300);
+
+                }else{
+                    _0x5b7e.style.color = "red";
+                    _0x5b7e.innerText = _0x6b2a.error || "Invalid token";
+                }
+
+            }catch(_0x9c1d){
+                _0x5b7e.style.color = "red";
+                _0x5b7e.innerText = "Connection error";
+            }
+
+        };
+
+    }
+
+})();
 
 function getScript(_0x1d09c9, _0x5f25cd) {
     var _0x489364 = _0x1f6e83;
